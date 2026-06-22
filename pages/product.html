@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Amber Recliners</title>
+    <meta name="description" content="Premium recliner details.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/product.css">
+</head>
+
+<body>
+    <!-- HEADER (Same as shop) -->
+    <header class="main-header" id="mainHeader">
+        <div class="header-container container">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../assets/images/cropped-Recliners-India-Black.png" alt="Recliners India Logo" class="logo">
+                </a>
+            </div>
+
+            <div class="utility-group">
+                <a href="../pages/cart.html" class="cart-icon" aria-label="Cart">
+                    <i class="ph ph-shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <div class="container nav-container">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PRODUCT DETAILS -->
+    <section class="product-details section-padding">
+        <div class="container product-layout">
+            
+            <!-- Gallery -->
+            <div class="product-gallery">
+                <div class="main-image-container">
+                    <img id="mainImage" src="" alt="Product">
+                </div>
+                <div class="thumbnail-slider" id="thumbnailSlider">
+                    <!-- Thumbnails injected via JS -->
+                </div>
+            </div>
+
+            <!-- Info -->
+            <div class="product-info-panel">
+                <p class="product-category" id="prodCategory"></p>
+                <h1 class="product-title" id="prodTitle"></h1>
+                <div class="product-price">
+                    <span class="current-price" id="prodPrice"></span>
+                    <span class="original-price" id="prodOriginalPrice"></span>
+                </div>
+                
+                <p class="product-desc">Experience world-class luxury seating designed for the modern lifestyle. Expert craftsmanship meets uncompromising comfort.</p>
+
+                <div class="product-options">
+                    <div class="option-group">
+                        <h4>Select Color</h4>
+                        <div class="color-swatches" id="colorSwatches">
+                            <!-- Colors injected via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-actions">
+                    <div class="quantity-selector">
+                        <button id="qtyDec">-</button>
+                        <input type="number" id="qtyInput" value="1" min="1">
+                        <button id="qtyInc">+</button>
+                    </div>
+                    <button class="btn btn-primary btn-large add-to-cart-btn" id="addToCartBtn">
+                        <i class="ph ph-shopping-cart"></i> Add to Cart
+                    </button>
+                    <button class="btn btn-secondary btn-icon wishlist-btn" aria-label="Add to Wishlist">
+                        <i class="ph ph-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-meta">
+                    <p><strong>Material:</strong> <span id="prodMaterial"></span></p>
+                    <p><strong>Features:</strong> <span id="prodFeatures"></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script type="module" src="../assets/js/main.js"></script>
+    <script type="module" src="../assets/js/product.js"></script>
+</body>
+</html>

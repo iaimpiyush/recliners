@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Amber Recliners</title>
+    <meta name="description" content="Browse our luxury collection of recliners, home theatre seating, and motion sofas.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/shop.css">
+</head>
+
+<body>
+    <!-- TOP UTILITY BAR -->
+    <div class="top-bar">
+        <div class="top-bar-container container">
+            <div class="contact-group">
+                <a href="tel:1800121189189" class="contact-item">
+                    <i class="ph-fill ph-phone"></i>
+                    <span>1800 121 189 189</span>
+                </a>
+                <a href="mailto:enquiry@reclinersindia.com" class="contact-item hidden-mobile">
+                    <i class="ph-fill ph-envelope-simple"></i>
+                    <span>enquiry@reclinersindia.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="main-header" id="mainHeader">
+        <div class="header-container container">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../assets/images/cropped-Recliners-India-Black.png" alt="Recliners India Logo" class="logo">
+                </a>
+            </div>
+
+            <div class="utility-group">
+                <a href="../pages/cart.html" class="cart-icon" aria-label="Cart">
+                    <i class="ph ph-shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+        <!-- NAVIGATION BAR -->
+        <nav class="nav-bar">
+            <div class="container nav-container">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="container text-center">
+            <h1>Luxury Collections</h1>
+            <p>Discover the perfect seating for your lifestyle.</p>
+        </div>
+    </div>
+
+    <!-- SHOP SECTION -->
+    <section class="shop-section section-padding">
+        <div class="container shop-layout">
+            
+            <!-- SIDEBAR FILTERS -->
+            <aside class="shop-sidebar">
+                <div class="filter-group">
+                    <h4>Categories</h4>
+                    <ul class="filter-list" id="categoryFilter">
+                        <li><label><input type="radio" name="category" value="All" checked> All</label></li>
+                        <li><label><input type="radio" name="category" value="Single Seater"> Single Seater</label></li>
+                        <li><label><input type="radio" name="category" value="Two Seater"> Two Seater</label></li>
+                        <li><label><input type="radio" name="category" value="Three Seater"> Three Seater</label></li>
+                        <li><label><input type="radio" name="category" value="Motorized"> Motorized</label></li>
+                        <li><label><input type="radio" name="category" value="Home Theatre"> Home Theatre</label></li>
+                    </ul>
+                </div>
+                
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <input type="range" id="priceRange" min="0" max="200000" step="5000" value="200000" style="width:100%">
+                    <div class="price-labels">
+                        <span>₹0</span>
+                        <span id="priceLabel">₹2,00,000+</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- PRODUCT GRID -->
+            <main class="shop-main">
+                <div class="shop-controls">
+                    <p class="results-count">Showing <span id="count">0</span> results</p>
+                    <select id="sortSelect" class="sort-select">
+                        <option value="featured">Sort by: Featured</option>
+                        <option value="priceLow">Price: Low to High</option>
+                        <option value="priceHigh">Price: High to Low</option>
+                    </select>
+                </div>
+                <div class="product-grid" id="productGrid">
+                    <!-- Products rendered via JS -->
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script type="module" src="../assets/js/main.js"></script>
+    <script type="module" src="../assets/js/shop.js"></script>
+</body>
+</html>
