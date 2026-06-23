@@ -14,10 +14,22 @@
         .form-group input { width: 100%; padding: 12px; border: 1px solid var(--border-light); border-radius: var(--radius-md); outline: none; }
         .form-group input:focus { border-color: var(--primary-color); }
     </style>
+
+    <!-- Theme Script (Inline to prevent FOUC) -->
+    <script>
+        (function() {
+            var theme = localStorage.getItem('theme');
+            if (theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 <body class="bg-light">
     <div class="auth-container">
-        <a href="../index.html"><img src="../assets/images/cropped-Recliners-India-Black.png" alt="Logo" style="height: 40px; margin-bottom: 32px;"></a>
+        <a href="../index.html"><img src="../assets/images/netflix-logo-png-2582.png" alt="Logo" style="height: 40px; margin-bottom: 32px;"></a>
         <h2>Welcome Back</h2>
         <form action="../index.html">
             <div class="form-group">
@@ -32,5 +44,6 @@
         </form>
         <p style="margin-top: 24px; color: var(--text-gray);">Don't have an account? <a href="register.html" class="text-primary">Create one</a></p>
     </div>
+<script src="../assets/js/theme.js"></script>
 </body>
 </html>

@@ -6,6 +6,18 @@
     <title>Contact Us | Amber Recliners</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Theme Script (Inline to prevent FOUC) -->
+    <script>
+        (function() {
+            var theme = localStorage.getItem('theme');
+            if (theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 <body>
     <header class="main-header" style="padding: 20px 0; border-bottom: 1px solid var(--border-light);">
@@ -23,5 +35,6 @@
             <a href="mailto:enquiry@reclinersindia.com" class="btn btn-outline-white" style="color: var(--text-dark); border-color: var(--text-dark);">Email Us</a>
         </div>
     </div>
+<script src="../assets/js/theme.js"></script>
 </body>
 </html>

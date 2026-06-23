@@ -1,38 +1,54 @@
-
-
 /* Large Desktop */
 @media (max-width: 1200px) {
-    .hero-title { font-size: 4rem; }
-    .hero-script { font-size: 3rem; }
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-script {
+        font-size: 3rem;
+    }
 }
 
 /* Tablet (Landscape) */
 @media (max-width: 992px) {
-    .hidden-tablet { display: none !important; }
-    
-    .nav-links { gap: 20px; }
-    .search-box { width: 220px; }
-    
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .search-box {
+        width: 220px;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
     }
-    
+
     .masonry-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    .item-wide { grid-column: span 1; }
-    .item-large { grid-column: span 2; }
+
+    .item-wide {
+        grid-column: span 1;
+    }
+
+    .item-large {
+        grid-column: span 2;
+    }
 }
 
 /* Tablet (Portrait) & Mobile Landscape */
 @media (max-width: 768px) {
-    .hidden-mobile { display: none !important; }
-    
+    .hidden-mobile {
+        display: none !important;
+    }
+
     /* Header Mobile adjustments */
-    .mobile-menu-toggle { display: block; }
-    
+    .mobile-menu-toggle {
+        display: block;
+    }
+
     .nav-bar {
         position: absolute;
         top: 100%;
@@ -42,19 +58,19 @@
         box-shadow: var(--shadow-md);
         display: none;
     }
-    
+
     .nav-links {
         flex-direction: column;
         gap: 0;
         padding: 20px 5%;
     }
-    
-    .nav-links > li > a {
+
+    .nav-links>li>a {
         padding: 15px 0;
         border-bottom: 1px solid var(--border-light);
         display: block;
     }
-    
+
     .dropdown-menu {
         position: static;
         box-shadow: none;
@@ -65,43 +81,98 @@
         transform: none;
         display: none;
     }
-    
+
     .dropdown.active .dropdown-menu {
         display: block;
     }
-    
+
     /* Hero */
-    .hero-title { font-size: 3rem; }
-    .hero-script { font-size: 2.5rem; left: 5%; }
-    .hero-desc { font-size: 1rem; }
-    .hero-actions { flex-direction: column; }
-    .hero-trust { flex-direction: column; gap: 12px; }
-    
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-script {
+        font-size: 2.5rem;
+        left: 5%;
+    }
+
+    .hero-desc {
+        font-size: 1rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-trust {
+        flex-direction: column;
+        gap: 12px;
+    }
+
     /* Sections */
-    h2 { font-size: 2rem; }
-    .section-padding { padding: 60px 0; }
-    
+    h2 {
+        font-size: 2rem;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
     /* Best Sellers */
-    .product-card { flex: 0 0 calc(80% - 16px); }
-    
+    .product-card {
+        flex: 0 0 calc(80% - 16px);
+    }
+
     /* Home Theatre */
-    .home-theatre-dark { flex-direction: column; }
-    .ht-content { padding: 60px 5%; }
-    
+    .home-theatre-dark {
+        flex-direction: column;
+    }
+
+    .ht-content {
+        padding: 60px 5%;
+    }
+
     /* Masonry */
-    .masonry-grid { grid-template-columns: 1fr; }
-    .item-large, .item-wide { grid-column: span 1; }
-    
+    .masonry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .item-large,
+    .item-wide {
+        grid-column: span 1;
+    }
+
     /* Footer */
-    .footer-grid { grid-template-columns: 1fr; }
-    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
 }
 
 /* Small Mobile */
 @media (max-width: 480px) {
-    .hero-title { font-size: 2.5rem; }
-    .hero-script { font-size: 2rem; }
-    .category-grid { grid-template-columns: 1fr; }
-    .testimonial-slider-wrapper { padding: 30px; }
-    .review-text { font-size: 1.125rem; }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-script {
+        font-size: 2rem;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-slider-wrapper {
+        padding: 30px;
+    }
+
+    .review-text {
+        font-size: 1.125rem;
+    }
 }

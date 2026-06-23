@@ -18,6 +18,18 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Theme Script (Inline to prevent FOUC) -->
+    <script>
+        (function() {
+            var theme = localStorage.getItem('theme');
+            if (theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -89,6 +101,11 @@
                     <i class="ph ph-shopping-cart"></i>
                     <span class="cart-badge" id="cartBadge">0</span>
                 </a>
+                
+                <button class="theme-toggle interactive" aria-label="Toggle Theme" style="font-size: 1.5rem; cursor: pointer;">
+                    <i class="ph ph-sun sun-icon"></i>
+                    <i class="ph ph-moon moon-icon" style="display: none;"></i>
+                </button>
                 <button class="mobile-menu-toggle" aria-label="Toggle Menu">
                     <i class="ph ph-list"></i>
                 </button>
@@ -112,7 +129,7 @@
                     <li><a href="#home-theatre">Home Theatre Seating</a></li>
                     <li><a href="#collections">Collections</a></li>
                     <li><a href="#experience">Experience</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="/pages/about.html">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -528,8 +545,10 @@
                         <i class="ph ph-plus"></i>
                     </button>
                     <div class="accordion-content">
-                        <p>Absolutely. We offer over 50 shades of premium Italian leather, ranging from top-grain to
-                            full-aniline, allowing you to perfectly match your interior decor.</p>
+                        <p>
+                            Absolutely. We offer over 50 shades of premium Italian leather, ranging from top-grain to
+                            full-aniline, allowing you to perfectly match your interior decor.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -608,6 +627,7 @@
     <script src="assets/js/ui.js"></script>
     <!-- Cart Logic (Requires local server due to modules) -->
     <script type="module" src="assets/js/main.js"></script>
+<script src="assets/js/theme.js"></script>
 </body>
 
 </html>

@@ -18,6 +18,18 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/about.css">
+
+    <!-- Theme Script (Inline to prevent FOUC) -->
+    <script>
+        (function() {
+            var theme = localStorage.getItem('theme');
+            if (theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 <body>
     <!-- TOP UTILITY BAR -->
@@ -63,6 +75,11 @@
                     <i class="ph ph-shopping-cart"></i>
                     <span class="cart-badge" id="cartBadge">0</span>
                 </a>
+                
+                <button class="theme-toggle interactive" aria-label="Toggle Theme" style="font-size: 1.5rem; cursor: pointer;">
+                    <i class="ph ph-sun sun-icon"></i>
+                    <i class="ph ph-moon moon-icon" style="display: none;"></i>
+                </button>
                 <button class="mobile-menu-toggle" aria-label="Toggle Menu">
                     <i class="ph ph-list"></i>
                 </button>
@@ -385,5 +402,6 @@
             }
         });
     </script>
+<script src="../assets/js/theme.js"></script>
 </body>
 </html>
